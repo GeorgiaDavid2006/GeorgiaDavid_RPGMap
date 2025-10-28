@@ -10,6 +10,16 @@ namespace GeorgiaDavid_RPGMap
     {
         static void Main(string[] args)
         {
+            
+        }
+
+        static void DisplayMap()
+        {
+
+        }
+
+        static void DisplayMap(int scale)
+        {
 
         }
     }
