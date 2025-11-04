@@ -10,7 +10,8 @@ namespace GeorgiaDavid_RPGMap
     {
         static void Main(string[] args)
         {
-            DisplayMap();
+            //DisplayMap();
+            DisplayMap(2);
         }
 
         static char[,] map = new char[,]
@@ -39,18 +40,37 @@ namespace GeorgiaDavid_RPGMap
 
         static void DisplayMap()
         {
-            for (int i = 0; i < map.GetLength(0); i++)
+            for (int row = 0; row < map.GetLength(0); row++)
             {
-                for (int j = 0; j < map.GetLength(1); j++)
+                for (int column = 0; column < map.GetLength(1); column++)
                 {
-                    Console.Write(map[i, j]);
+                    Console.Write(map[row, column]);
                 }
+
+                Console.WriteLine();
             }
         }
 
         static void DisplayMap(int scale)
         {
+            for (int row = 0; row < map.GetLength(0); row++)
+            {
+                for(int duplicaterow = 0; duplicaterow < scale; duplicaterow++)
+                {
+                    for (int column = 0; column < map.GetLength(1); column++)
+                    {
+                        for(int duplicatecolumn = 0; duplicatecolumn < scale; duplicatecolumn++)
+                        {
+                            Console.Write(map[row, column]);
+                        }
+                        
+                    }
+                    Console.WriteLine();
+                }
+                
 
+                
+            }
         }
     }
 }
