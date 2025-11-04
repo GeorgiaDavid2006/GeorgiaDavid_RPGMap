@@ -39,9 +39,9 @@ namespace GeorgiaDavid_RPGMap
 
         static void DisplayMap()
         {
-            for (int i = 1; i < map.Length; i++)
+            for (int i = 0; i < map.Length; i++)
             {
-                for (int j = 1; j < i; j++)
+                for (int j = 0; j < i; j++)
                 {
 
                 }
