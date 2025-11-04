@@ -5,3 +5,4 @@ C:\Users\W0512995\source\repos\GeorgiaDavid_RPGMap\GeorgiaDavid_RPGMap\obj\Debug
 C:\Users\W0512995\source\repos\GeorgiaDavid_RPGMap\GeorgiaDavid_RPGMap\obj\Debug\GeorgiaDavid_RPGMap.csproj.CoreCompileInputs.cache
 C:\Users\W0512995\source\repos\GeorgiaDavid_RPGMap\GeorgiaDavid_RPGMap\obj\Debug\GeorgiaDavid_RPGMap.exe
 C:\Users\W0512995\source\repos\GeorgiaDavid_RPGMap\GeorgiaDavid_RPGMap\obj\Debug\GeorgiaDavid_RPGMap.pdb
+C:\Users\W0512995\source\repos\GeorgiaDavid_RPGMap\GeorgiaDavid_RPGMap\obj\Debug\GeorgiaDavid_RPGMap.exe.config

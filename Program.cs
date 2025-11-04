@@ -10,7 +10,7 @@ namespace GeorgiaDavid_RPGMap
     {
         static void Main(string[] args)
         {
-            
+            DisplayMap();
         }
 
         static char[,] map = new char[,]
@@ -39,11 +39,11 @@ namespace GeorgiaDavid_RPGMap
 
         static void DisplayMap()
         {
-            for (int i = 0; i < map.Length; i++)
+            for (int i = 0; i < map.GetLength(0); i++)
             {
-                for (int j = 0; j < i; j++)
+                for (int j = 0; j < map.GetLength(1); j++)
                 {
-
+                    Console.Write(map[i, j]);
                 }
             }
         }
