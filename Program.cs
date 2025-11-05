@@ -10,7 +10,7 @@ namespace GeorgiaDavid_RPGMap
     {
         static void Main(string[] args)
         {
-            //DisplayMap();
+            DisplayMap();
             DisplayMap(2);
         }
 
