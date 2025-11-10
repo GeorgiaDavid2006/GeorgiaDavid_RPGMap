@@ -93,24 +93,28 @@ namespace GeorgiaDavid_RPGMap
                 }
             }
 
-            Console.WriteLine("\n");
+            Console.WriteLine();
 
             for (int row = 0; row < map.GetLength(0); row++)
             {
                 for (int duplicaterow = 0; duplicaterow < scale; duplicaterow++)
                 {
+                    Console.Write("|");
                     for (int column = 0; column < map.GetLength(1); column++)
                     {
+                        
                         for (int duplicatecolumn = 0; duplicatecolumn < scale; duplicatecolumn++)
                         {
                             Console.Write(map[row, column]);
                         }
+                        
                     }
+                    Console.Write("|");
+                    Console.WriteLine();
                 }
                 
             }
-            Console.Write("|");
-            Console.WriteLine();
+            
 
             for (int border = 0; border < map.GetLength(1) * scale + 2; border++)
             {
