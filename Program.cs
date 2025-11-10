@@ -41,9 +41,9 @@ namespace GeorgiaDavid_RPGMap
 
         static void DisplayMap()
         {
-            for (int i = 0; i < map.GetLength(1) + 2; i++)
+            for (int border = 0; border < map.GetLength(1) + 2; border++)
             {
-                if (i == 0 || i == map.GetLength(1) + 1)
+                if (border == 0 || border == map.GetLength(1) + 1)
                 {
                     Console.Write("+");
                 }
@@ -65,9 +65,9 @@ namespace GeorgiaDavid_RPGMap
                 Console.Write("|");
                 Console.WriteLine();
             }
-            for (int i = 0; i < map.GetLength(1) + 2; i++)
+            for (int border = 0; border < map.GetLength(1) + 2; border++)
             {
-                if (i == 0 || i == map.GetLength(1) + 1)
+                if (border == 0 || border == map.GetLength(1) + 1)
                 {
                     Console.Write("+");
                 }
@@ -81,9 +81,9 @@ namespace GeorgiaDavid_RPGMap
 
         static void DisplayMap(int scale)
         {
-            for (int i = 0; i < map.GetLength(1) * scale + 2; i++)
+            for (int border = 0; border < map.GetLength(1) * scale + 2; border++)
             {
-                if (i == 0 || i == map.GetLength(1) * scale + 1)
+                if (border == 0 || border == map.GetLength(1) * scale + 1)
                 {
                     Console.Write("+");
                 }
@@ -97,7 +97,6 @@ namespace GeorgiaDavid_RPGMap
 
             for (int row = 0; row < map.GetLength(0); row++)
             {
-                Console.Write("|");
                 for (int duplicaterow = 0; duplicaterow < scale; duplicaterow++)
                 {
                     for (int column = 0; column < map.GetLength(1); column++)
@@ -108,12 +107,14 @@ namespace GeorgiaDavid_RPGMap
                         }
                     }
                 }
-                Console.Write("|");
-                Console.WriteLine();
+                
             }
-            for (int i = 0; i < map.GetLength(1) * scale + 2; i++)
+            Console.Write("|");
+            Console.WriteLine();
+
+            for (int border = 0; border < map.GetLength(1) * scale + 2; border++)
             {
-                if (i == 0 || i == map.GetLength(1) * scale + 1)
+                if (border == 0 || border == map.GetLength(1) * scale + 1)
                 {
                     Console.Write("+");
                 }
