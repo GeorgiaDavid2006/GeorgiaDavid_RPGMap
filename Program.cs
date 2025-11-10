@@ -10,16 +10,17 @@ namespace GeorgiaDavid_RPGMap
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Map Legend:");
+            Console.WriteLine("` = grass");
+            Console.WriteLine("^ = mountain");
+            Console.WriteLine("~ = water");
+            Console.WriteLine("* = trees");
+
             DisplayMap();
             DisplayMap(2);
         }
 
-        static char[,] border = new char[,]
-        {
-            {'+', '-', '-', '-', '+'},
-            {'|', ' ', ' ', ' ', '|'},
-            {'+', '-', '-', '-', '+'},
-        };
+        
 
         static char[,] map = new char[,]
         {
@@ -37,47 +38,93 @@ namespace GeorgiaDavid_RPGMap
         {'`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`','`'},
         };
 
-        // usage: map[y, x]
-
-        // map legend:
-        // ^ = mountain
-        // ` = grass
-        // ~ = water
-        // * = trees
 
         static void DisplayMap()
         {
+            for(int i = 0; i < map.GetLength(1) + 2; i++)
+            {
+                if(i == 0 || i == map.GetLength(1) + 1)
+                {
+                    Console.Write("+");
+                }
+                else
+                {
+                    Console.Write("-");
+                }    
+            }
+
+            Console.Write("\n");
+
             for (int row = 0; row < map.GetLength(0); row++)
             {
+                Console.Write("|");
                 for (int column = 0; column < map.GetLength(1); column++)
                 {
                     Console.Write(map[row, column]);
                 }
-
+                Console.Write("|");
                 Console.WriteLine();
             }
+            for (int i = 0; i < map.GetLength(1) + 2; i++)
+            {
+                if (i == 0 || i == map.GetLength(1) + 1)
+                {
+                    Console.Write("+");
+                }
+                else
+                {
+                    Console.Write("-");
+                }
+            }
+            Console.WriteLine();
         }
 
         static void DisplayMap(int scale)
         {
+            for (int i = 0; i < map.GetLength(1) * scale + 2; i++)
+            {
+                if (i == 0 || i == map.GetLength(1) * scale + 1)
+                {
+                    Console.Write("+");
+                }
+                else
+                {
+                    Console.Write("-");
+                }
+            }
+
+            Console.WriteLine("\n");
+
             for (int row = 0; row < map.GetLength(0); row++)
             {
-                for(int duplicaterow = 0; duplicaterow < scale; duplicaterow++)
+                for (int duplicaterow = 0; duplicaterow < scale; duplicaterow++)
                 {
                     for (int column = 0; column < map.GetLength(1); column++)
                     {
-                        for(int duplicatecolumn = 0; duplicatecolumn < scale; duplicatecolumn++)
+                        Console.Write("|");
+                        for (int duplicatecolumn = 0; duplicatecolumn < scale; duplicatecolumn++)
                         {
                             Console.Write(map[row, column]);
                         }
-                        
+                        Console.Write("|");
+                        Console.WriteLine();
+                        for (int i = 0; i < map.GetLength(1) * scale + 2; i++)
+                        {
+                            if (i == 0 || i == map.GetLength(1) * scale + 1)
+                            {
+                                Console.Write("+");
+                            }
+                            else
+                            {
+                                Console.Write("-");
+                            }
+                        }
                     }
-                    Console.WriteLine();
-                }
-                
 
-                
+                }
+
             }
+            Console.WriteLine();
         }
     }
 }
